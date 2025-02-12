@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body style="background-color:#676EA7; font-family: 'Times New Roman', Times, serif; color: #f3f4f6;margin-top: 90px; ">
+        <title> Laboratorio 01 </title>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center;">
+            <img src="ale_photo.JPG" style="border-radius: 300px; width: 10%; height: 10%; align-items: center; flex:1; margin:40px;">
+            <div style="text-align: center; flex:1;">
+                <h1 style="font-size: 80px; cursor: pointer; ">
+                    Bienvenidos!! <br>
+                    Soy Alejandra Arredondo
+                </h1>
+                <p style="margin-top: 40px; font-size: 20px;">
+                    Matrícula: A01711434 <br>
+                    Correo: a01711434@tec.mx<br><br>
+                    Mi nombre es Alejandra Arredondo. 
+                    Soy estudiante de ingeniería en tecnologías computacionales de cuarto semestre 
+                    en el Tecnológico de Monterrey campus Querétaro. <br><br>
+                    Durante mis tiempos libres me gusta escuchar música, ver películas y series, 
+                    hacer deporte en especial me gusta jugar voleibol, nadar y hacer spinning. 
+                </p>
+            </div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: center; margin: 60px; background-color: #43486b; border-radius: 40px;">
+            <div style="text-align:justify; flex:1; min-width: 300px; padding: 10px; box-sizing: border-box;">
+                <h3>1. ¿Cuál es la diferencia entre Internet y la World Wide Web?</h3>
+                <p>
+                    Internet es una red de computadoras que se encuentran interconectadas a nivel mundial para compartir 
+                    información, en cambio, la Wold Wide Web es en un complejo sistema de hipertextos e hipermedios 
+                    interconectados entre sí y a los que puede tenerse acceso mediante una conexión a Internet y un
+                    conjunto de software especializado. 
+                </p>
+
+                <h3>2. ¿Cuáles son las partes de un URL?</h3>
+                <p>
+                    <b>Protocolo:</b> 
+                    Es el primer componente de una URL y determina cómo se transmiten los datos.Como HTTP, HTTPS, FTP</p>
+                <p> 
+                    <b>Dominio:</b> 
+                    Es la dirección del sitio web. Proporciona una forma fácil de recordar los sitios en lugar de usar direcciones IP.
+                </p>
+                <p>
+                    <b>Subdominio:</b> Es una parte adicional del nombre de dominio que puede representar una sección específica del sitio. 
+                    Generalmente se encuentra antes del nombre de dominio principal.
+                </p>
+                <p>
+                    <b>Ruta:</b> Indica la ubicación específica de un recurso en el servidor.
+                    >Se puede comparar con una dirección en una casa donde cada carpeta o archivo tiene su propio lugar.
+                </p> 
+                <p>
+                    <b>Parámetros de consulta:</b> 
+                    Son valores que se envían al servidor para modificar o personalizar la respuesta.
+                    Se añaden al final de la URL usando un signo de interrogación (?)</p>
+                <p>
+                    <b>Fragento:</b> 
+                    Es una parte opcional que puede dirigir a una sección específica de una página.Se indica con un signo de número (#)
+                </p>
+                
+                <h3>3. ¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</h3>
+                <p>
+                    Son métodos de petición para indicar la acción que se desea realizar para un recurso determinado. 
+                    Aunque estos también pueden ser sustantivos, estos métodos de solicitud a veces son llamados HTTP verbs. 
+                </p>
+                <ul>
+                    <li><b>GET:</b> Solicita una representación de un recurso específico. Las peticiones que usan el método GET sólo deben <br> recuperar datos.</li>
+                    <li><b>HEAD:</b> Pide una respuesta idéntica a la de una petición GET, pero sin el cuerpo de la respuesta.</li>
+                    <li><b>POST:</b> se utiliza para enviar una entidad a un recurso en específico, causando a menudo un cambio en el estado o efectos <br>secundarios en el servidor.</li>
+                    <li><b>PUT:</b> Reemplaza todas las representaciones actuales del recurso de destino con la carga útil de la petición.</li>
+                    <li><b>PATCH:</b> Es utilizado para aplicar modificaciones parciales a un recurso.</li>
+                    <li><b>DELETE: </b>Borra un recurso en específico.</li>
+                </ul>
+
+                <h3>4. ¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio?<br> ¿Por qué?</h3>
+                <p>Los datos del formulario HTML se pueden transmitir a través de un número de diferentes queridos, los más comunes de los cuales son el método GET y el método POST .</p>
+
+                <h3>5. ¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</h3>
+                <p>
+                    El método GET se usa para solicitar información desde un servidor web. Esta solicitud se realiza a través de una URL. 
+                    Cuando el servidor recibe la solicitud, devuelve la información solicitada. El método GET no cambia los datos en el servidor.
+                </p>
+
+                <h3>6. Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</h3>
+                <p>Este código indica que la solicitud ha sido exitosa y que el servidor ha devuelto el contenido solicitado sin problemas.</p>
+
+                <h3>7. ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</h3>
+                <p>
+                    404 es un código de estado HTTP, el cual significa que tu navegador se ha conectado con un servidor, pero que este no es capaz de mostrarte la web que deseas.
+                    Puede que también te encuentres con este mismo error, pero con denominaciones como Error 404 not found, Error 404 URL no encontrada, Error 404 página no encontrada 
+                    o Error 404 Archivo no encontrado, cuando esta problemática se da con un fichero determinado de una web.
+                </p>
+                <p>
+                    El error 404 no es responsabilidad total del desarrollador de resolver, debido a que hay causas de este error de las cuales el desarrollador no puede actuar.
+                </p>
+
+                <h3>8. ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</h3>
+                <p>
+                    El error 500, también conocido como Internal Server Error (Error Interno del Servidor).  es un código de estado HTTP que indica que algo ha salido mal en el servidor
+                    web al intentar procesar una solicitud del navegador. Cuando aparece este tipo de error no se proporciona ningún tipo de detalle sobre la causa, lo que complica aún más 
+                    la identificación de cuál es el problema exacto. La única información certera que tienes es la de saber que el servidor o la propia aplicación informó al navegador de un 
+                    fallo inesperado, por lo que hay que averiguar que está ocurriendo. El desarrollador es el responsable de arreglar el error, debido a que las principales causas por la cual este error
+                    aparece es por fallas en el backend o la base de datos. 
+                </p>
+                <p>
+                    <b>Causas:</b> 
+                    Programación, configuración del servidor, los recursos, software, base de datos, actualizaciones incorrectas, servidor web, limites de tiempo de ejecución, ataques.
+                </p>
+            </div>
+            <div style="text-align:justify; flex:1; min-width: 300px; padding: 10px; box-sizing: border-box;">
+                <h3>9. ¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</h3>
+                <p>
+                    Deprecated tags are those tags that are allowed, but not recommended for use and are being replaced by newer ones. The tag or attributes depreciated when the same 
+                    attributes are achieved in some other way. Several reasons for being discarded & uses the newer one:
+                </p>
+                <ul>
+                    <li>basefont</li>
+                    <li>font</li>
+                    <li>center</li>
+                    <li>strike</li>
+                    <li>big</li>
+                </ul>
+
+                <h3>10. ¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</h3>
+                <p>Las principales diferencias son:</p>
+                <p><b>HTML4:</b></p>
+                <ul>
+                    <li>Permite la creación de hipervínculos con la (a) etiqueta, conectando diferentes páginas web.</li>
+                    <li>Utiliza etiquetas para marcar elementos y contenido, como encabezados ( h1 a h6).</li>
+                    <li>Admite la incrustación de imágenes (img), vídeos (video) y audio (audio) para contenido multimedia.</li>
+                    <li>Proporciona elementos de formulario como form, input y button para la entrada y el envío de datos por parte del usuario.</li>
+                    <li>Etiquetas semánticas como article, section, y nav para una mejor estructura y accesibilidad del documento.</li>
+                    <li>No admitía audio ni video sin el uso de compatibilidad con Flash Player</li>
+                    <li>Utiliza cookies para almacenar datos temporales</li>
+                    <li>no permite que JavaScript se ejecute en el navegador</li>
+                    <li>No permite efectos de arrastrar y soltar</li>
+                </ul>
+                <p><b>HTML5:</b></p>
+                <ul>
+                    <li>Se introdujeron nuevos elementos semánticos como header, footer, section y article para mejorar la estructura.</li>
+                    <li>Mejora las capacidades multimedia con soporte nativo para elementos de audio y video.</li>
+                    <li>Proporciona la localStorageAPI, lo que permite que las aplicaciones web almacenen datos localmente en el dispositivo del usuario.</li>
+                    <li>Permite que los sitios web accedan a la ubicación geográfica de un usuario.</li>
+                    <li>Utiliza una base de datos SQL para almacenar datos sin conexión.</li>
+                    <li>Admite controles de audio y video con el uso de etiquetas audio y video</li>
+                    <li>Utiliza base de satos SQL y caché de aplicaciones para almacenar datos sin conexión</li>
+                    <li>Permite ejecutar JavaScript en segundo plano Esto gracias a la API de trabajo web de JS en HTML5</li>
+                    <li>Permite efectos de arrastrar y soltar</li>
+                </ul>
+
+                <h3>11. ¿Qué componentes de estructura y estilo tiene una tabla?</h3>
+                <p>
+                    La etiqueta que define el inicio y el fin de la tabla es la de tabla. Las celdas se crean con una etiqueta tr al cual podemos
+                    ponerle el encabezado con la etiqueta th. Para agregar filas usamos la etiqueta td. Por ultimo la etiqueta caption proporciona un titulo
+                    para la tabla.
+                </p>
+
+                <h3>12. ¿Cuáles son los principales controles de una forma HTML5?</h3>
+                <ul>
+                    <li><b>Estructura semántica:</b> Utiliza elementos como y para definir el encabezado y la navegación.</li>
+                    <li><b>Multimedia e interactividad:</b> incluye para insertar audio con soporte de controles de reproducción.</li>
+                    <li><b>Formularios:</b> Introdujo nuevos tipos de entradas como date, email, url, number y range.</li>
+                    <li><b>Nuevas APIs: </b>HTML5 tambien proporciona APIs para funcionalidad adicional.</li>
+                </ul>
+
+                <h3>14. ¿Cuál es el ciclo de vida de los sistemas de información?</h3>
+                <p>
+                    El ciclo de vida de un sistema de información es un modelo estructurado de gestión de proyectos que describe las fases 
+                    necesarias para construir un sistema de información, desde el inicio hasta el resultado final. También se refiere a todo el recorrido que 
+                    realiza un sistema, desde su nacimiento hasta su expiración, abarcando fases extensas. Las fases del ciclo de vida de los sistemas de información son:
+                </p>
+                <ol>
+                    <li>
+                        <b>Planificación:</b> 
+                         El analista de sistemas debe centrarse en lo que el sistema pretende lograr y utilizar esa información para encontrar una manera de lograr ese objetivo
+                    </li>
+                    <li>
+                        <b>Análisis de requerimientos:</b>
+                         El analista debe elaborar una lista de todo lo que necesita la empresa para poder desarrollar el mejor sistema teniendo en cuenta los recursos realmente disponibles
+                    </li>
+                    <li>
+                        <b>Diseño:</b>
+                         Esta fase describe como abordar el diseño de la arquitectura del sistema, por ejemplo, las interfaces de usuario, la red de computadoras,
+                        la base de datos y las eguridad, que puedan satisfacer los requerimientos y permitan actualizaciones futuras. 
+                    </li>
+                    <li>
+                        <b>Desarrollo:</b>
+                         En esta fase, el plano del sistema pasará del modelo a la práctica, a medida que los programadores desarrollen un sistema completamente funcional.
+                         Los ingenieros de software escriben el código y van ajustando los tecnologías involucradas en el proyecto. 
+                    </li>
+                    <li>
+                        <b>Prueba: </b>
+                         El sistema debe someterse a una inspección exhaustiva en diferentes escenarios. Si se encuentran errores o problemas, el equipo de trabajo deberá alineaarse 
+                        para resolverlos sin alterar el resto del sistema
+                    </li>
+                    <li>
+                        <b>Integración y ejecución: </b>
+                         Se realiza el primer lanzamiento del sistema. En una situación ideal, la ejecución será tan fluida que no se requerirá ningún esfuerzo adicional cuando ocurra la integración. 
+                         De ser posible, la integración de un nuevo sistema en una empresa debería ser automática y agil.
+                    </li>
+                    <li>
+                        <b>Operación y mantenimiento:</b>
+                         Aunque las pruebas deberían haber resuelto cualquier problema que pudiera haber surgido, es importante monitorear el nuevo sistema para asegurarse que esté funcionando
+                         correctamente. También es importante que el sistema se someta a un mantenimiento frecuente para que pueda seguir funcionando sin problemas. 
+                    </li>
+                </ol>
+
+                <h3>15. ¿Cuál es el ciclo de desarrollo de sistemas de información?</h3>
+                <p>
+                    El ciclo de desarrollo de sistemas de información se centra en las etapas específicas involucradas en la creación de un sistema de información. Aunque las etapas pueden variar 
+                    según la metodología utilizada, generalmente incluyen:
+                </p>
+                <ol>
+                    <li>
+                        <b>planificación:</b> 
+                         El ciclo de desarrollo de sistemas de información se centra en las etapas específicas involucradas en la creación de un sistema de información. Aunque las etapas pueden variar
+                         según la metodología utilizada, generalmente incluyen:
+                    </li>
+                    <li>
+                        <b>Análisis de requerimientos: </b>
+                        Se recopilan y documentan los requisitos del sistema, asegurando que se entiendan las necesidades del usuario y los objetivos del negocio.
+                    </li>
+                    <li>
+                        <b>Diseño: </b>
+                        Se elabora un diseño detallado del sistema, que incluye la arquitectura, las interfaces de usuario y la base de datos, asegurando que se cumplan los requisitos.
+                    </li>
+                    <li>
+                        <b>Desarrollo:</b>
+                        En esta fase, se lleva a cabo la programación y la construcción del sistema, donde los desarrolladores crean el software según el diseño especificado.
+                    </li>
+                    <li>
+                        <b>Pruebas:</b>
+                        Se realizan pruebas exhaustivas para identificar y corregir errores antes de que el sistema se implemente en un entorno de producción.
+                    </li>
+                    <li>
+                        <b>Implementación: </b>
+                        Se lanza el sistema al entorno de producción, donde se pone en funcionamiento y se integra con otros sistemas existentes.
+                    </li>
+                    <li>
+                        <b>Mantenimiento: </b>
+                        Después de la implementación, el sistema requiere mantenimiento continuo para corregir errores, realizar actualizaciones y mejorar la funcionalidad según sea necesario.
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center;">
+            <div style="flex:1; text-align:justify; min-width: 300px;">
+                <h3>Links de las referencias</h3>
+                <ol>
+                    <li>https://developer.mozilla.org/es/docs/Web/HTTP/Methods</li>
+                    <li>https://computerhoy.20minutos.es/tutoriales/error-404-significa-como-solucionarlo-1284880</li>
+                    <li> https://computerhoy.20minutos.es/tutoriales/error-500-significa-como-solucionarlo-1293380</li>
+                    <li>https://www.donprofe.com/como-enviar-los-datos-del-formulario-a-un-servidor-web#anchor_7</li>
+                    <li>https://saberpunto.com/programacion/metodos-http-entienda-get-post-put-delete-y-mas/</li>
+                    <li>https://www.geeksforgeeks.org/what-are-the-html-tags-that-deprecated-in-html5/</li>
+                    <li>https://www.geeksforgeeks.org/what-are-the-html-tags-that-deprecated-in-html5/</li>
+                    <li>https://www.lifeder.com/ciclo-vida-sistema-informacion/#:~:text=Fases%20del%20ciclo%20de%20vida%20de%20los%20sistemas,y%20ejecuci%C3%B3n%20...%207%20Operaci%C3%B3n%20y%20mantenimiento%20</li>
+                </ol>
+            </div>
+        </div>
+
+    </body>
+</html>
