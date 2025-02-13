@@ -1,0 +1,53 @@
+body {
+    background-color: #676EA7;
+    font-family: 'Times New Roman', Times, serif;
+    color: #f3f4f6;
+    margin-top: 90px;
+}
+img.myphoto{
+    border-radius: 300px;
+    width: 10%;
+    height: 10%;
+    align-items: center;
+    flex: 1;
+    margin: 40px;
+}
+p.textR{
+    margin-top: 4vw;
+    font-size: 2vw;
+}
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.infoF{
+    text-align: center;
+    flex: 1;
+}
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 60px;
+    background-color: #43486b;
+    border-radius: 40px;
+}
+.questions{
+    text-align: justify;
+    flex: 1;
+    min-width: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.references{
+    flex: 1;
+    text-align: justify;
+    min-width: 300px;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    margin: 10px;
+}
