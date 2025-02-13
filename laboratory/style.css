@@ -32,7 +32,8 @@ p.textR{
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
-    margin: 60px;
+    margin-left: 60px;
+    margin-right: 60px;
     background-color: #43486b;
     border-radius: 40px;
 }
@@ -49,5 +50,9 @@ p.textR{
     min-width: 300px;
     max-width: 100%;
     overflow-wrap: break-word;
-    margin: 10px;
+    margin-left: 60px;
+}
+.titleLab{
+    margin-left: 60px;
+    text-decoration: underline;
 }
