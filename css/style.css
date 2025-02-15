@@ -1,8 +1,14 @@
 body {
     background-color: #676EA7;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: #f3f4f6;
     margin-top: 90px;
+}
+h1 {
+    font-size: 4vw;
+}
+h4{
+    text-decoration: underline;
 }
 img.myphoto{
     border-radius: 300px;
@@ -43,6 +49,7 @@ p.textR{
     min-width: 300px;
     padding: 10px;
     box-sizing: border-box;
+    margin: 2em;
 }
 .references{
     flex: 1;
@@ -50,9 +57,17 @@ p.textR{
     min-width: 300px;
     max-width: 100%;
     overflow-wrap: break-word;
-    margin-left: 60px;
+    margin-left: 4em;
+    margin-right: 4em;
 }
 .titleLab{
     margin-left: 60px;
     text-decoration: underline;
+}
+
+#operacion {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin: 1em;
 }

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
     </head>
     <body>
         <title> Laboratorio 01 </title>
         <div class="info">
             <img src="ale_photo.JPG" class="myphoto">
             <div class="infoF">
-                <h1 style="font-size: 4vw; ">
+                <h1>
                     Bienvenidos!! <br>
                     Soy Alejandra Arredondo
                 </h1>
@@ -260,14 +260,15 @@
                 </ol>
             </div>
         </div>
-        <h2 class="titleLab">Laboratorio 2: </h2>
+        <h2 class="titleLab">Laboratorio 3: </h2>
         <div class="info">
             <div class="box">
                 <ol>
                     <h3><li>Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS? </li></h3>
                     <p>
                         No usarlo, aunque !important es una regla en CSS se utiliza para agregar más importancia a una propiedad/valor de lo normal y anulará
-                         TODAS las reglas de estilo anteriores para esa propiedad específica en ese elemento. Ya que el uso de este sería una mejor práctica no utilizarlo.
+                         TODAS las reglas de estilo anteriores para esa propiedad específica en ese elemento. Ya que el uso de este sería una mejor práctica no utilizarlo. 
+                         El utilizarlo denota una mala dedicación a la creación del documento.
                     </p>
                     <h3><li>Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</li></h3>
                     <p>
@@ -295,5 +296,143 @@
 
                 </ol>
             </div>
+        </div>
+        <h2 class="titleLab">Laboratorio 4: </h2>
+        <div class="box">
+            <div class="questions">
+                <h4>Problema 1</h4>
+                <div id="operacion"><br></div>
+
+                <h4>Problema 2</h4>
+                <div id="resul"><br></div>
+
+                <h4>Problema 3</h4>
+                <div id="problem3"></div>
+
+                <h4>Problema 4</h4>
+                <div id="problema4"></div>
+
+                <h4>Problema 5</h4>
+                <div id="problema5"></div>
+
+                <h4>Problema 6</h4>
+                <h5>Description: </h5>
+                <p>
+                    Assume you are an awesome parent and want to give your children some cookies. But, you should give each child at most one cookie.<br><br>
+                    Each child i has a greed factor g[i], which is the minimum size of a cookie that the child will be content with; and each cookie j has a size s[j]. If s[j] >= g[i], 
+                    we can assign the cookie j to the child i, and the child i will be content. Your goal is to maximize the number of your content children and output the maximum number.
+                </p>
+                <h5>Solution</h5>
+                <div id="problem6"></div>
+
+                <h4>Preguntas:</h4>
+                <ol>
+                    <h3><li>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</li></h3>
+                    <p>
+                        Aunque Java y JavaScript suenan a dos lenguajes de programación simalares, es todo lo contrario. Mientras que Java es un lenguaje de programación orientado a objetos y se utiliza
+                        principalmente para el desarrollo de aplicaciones de escritorio y servidores, JavaScript es un lenguaje de secuencia de comandos del lado del cliente que se utiliza para agregar 
+                        interactividaad y dinamismo a las páginas web. A pesar de las diferencias mencionados, estos dos lenguajes de programación compartenalgunas simmilitudes. Ambos lenguajes son orientados
+                        a objetos, lo que significa que utilizan objetos y clases para organizar y estructurar el código. También se basan en gran medida en la sixtaxsis de C, lo que facilita aprender uno de 
+                        los dos lenguajes si ya son familiares con el otro. <br> Además ambos lenguajes son ampliamente utilizados en la industria del desarrollo de software. 
+                    </p>
+
+                    <h3><li>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</li></h3>
+                    <h6>Métodos Estáticos</h6>
+                    <ol>
+                        <li>Date.now():</li>
+                        <p>Devuelve el valor númerico correspondiente al actual número de milisegundos transcurridos desde el 1 de Enero de 1970, oo:oo:oo UTC,, ignorando los segundos intercalares</p>
+                        <li>Date.parse()</li>
+                        <p>
+                            Transforma la cadena que representa una fecha y retorna el número de milisegundos transcurridos desde el 1 de Enero de 1970, ignorando los segundos intercalares. Es muy poco 
+                            recomendado utilizarlo
+                        </p>
+                        <li>Date.UTC()</li>
+                        <p>
+                            Acepta los mismos parámetros de la forma extendida del constructor y retorna el numero de milisegundos trsnacurridos desde el 1 de Enero de 1970
+                        </p>
+                        <li>getMonth()</li>
+                        <p>
+                            Devuelve el mes de la fecha especificada como un número entre 0 (enero) y 11 (diciembre).
+                            Se debe usar junto con +1 si deseas obtener el número de mes de forma más intuitiva.
+                        </p>
+                        <li>getDate()</li>
+                        <p>
+                            Devuelve el día del mes (1-31) de la fecha especificada.
+                        </p>
+                        <li>getFullYear()</li>
+                        <p>
+                            Devuelve el año de la fecha especificada con cuatro dígitos.
+                        </p>
+                        <li>getHours()</li>
+                        <p>
+                            Devuelve la hora de la fecha especificada en formato de 24 horas (0-23).
+                        </p>
+                        <li>getTime()</li>
+                        <p>
+                            Devuelve el número de milisegundos transcurridos desde el 1 de enero de 1970 (Epoch).
+                            Se usa frecuentemente para cálculos de tiempo o comparaciones entre fechas.
+                        </p>
+                    </ol>
+
+                    <h3><li>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</li></h3>
+                    <ol>
+                        <li>Array.find</li>
+                        <p>
+                            Este método te permite encontrar un único (y primer) elemento dentro de un arreglo. 
+                            Para definir qué elementos buscas debes determinar una condición que retorne true o false.                       
+                        </p>
+                        <li>push()</li>
+                        <p> Inserta un elemento al final del arreglo. </p>
+                        <li>unshift()</li>
+                        <p>Inserta un elemento al incio del arreglo</p>
+                        <li>pop()</li>
+                        <p>Remueve un elemento del final del arreglo</p>
+                        <li>shift()</li>
+                        <p>remueve un elemento del principio del arreglo</p>
+                        <li>slice()</li>
+                        <p>Crea una copio sombra del arreglo</p>
+                        <li>Array.isArray()</li>
+                        <p>Determina si el valor es un arreglo</p>
+                        <li>length</li>
+                        <p>Determina el tamaño del arreg</p>
+                    </ol>
+
+                    <h3><li>¿Cómo se declara una variable con alcance local dentro de una función?</li></h3>
+                    <p>
+                        Para declarar una variable con alcance local dentro de una función en programación,
+                        se pueden usar palabras clave como var, let o const. Estas variables solo están disponibles dentro de un contexto 
+                        local específico y se crean dentro del cuerpo de la función
+                    </p>
+
+                    <h3><li>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</li></h3>
+                    <p>
+                        Estas variables, que pueden ser accedidas y modificadas desde cualquier parte del programa, juegan un papel crucial 
+                        en la creación de software eficientes y escalables. Las variables globales se utilizan comúnmente para almacenar valores
+                        que deben ser compartidos entre diferentes partes del programa, como constantes, configuraciones del sistema o datos de inicio.
+                        Es importante destacar que, aunque las variables globales pueden ser útiles, también pueden generar problemas de mantenimiento
+                        y escalabilidad en grandes programas, ya que pueden hacer que el código sea más difícil de entender y depurar. 	Puede generar 
+                        problemas de seguridad
+                        
+                    </p>
+                </ol>
+            </div>
+        </div>
+        <div class="info">
+            <div class="references">
+                <h3>Links de las referencias</h3>
+                <ol>
+                   <li>https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces</li>
+                   <li>https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math/random</li>
+                   <li>https://www.w3schools.com/jsref/prop_html_innerhtml.asp</li>
+                   <li>https://www.w3schools.com/howto/howto_js_countdown.asp</li>
+                   <li>https://es.stackoverflow.com/questions/218290/funci%c3%b3n-en-javascript-que-reciba-un-arreglo-de-n%c3%bameros-como-par%c3%a1metro</li>
+                   <li>https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date</li>
+                   <li>https://aprenderjava.net/base/es-javascript-igual-a-java-aclarando-las-diferencias-y-similitudes/?=</li>
+                   <li>https://www.escuelafrontend.com/metodos-de-arreglos</li>
+                   <li>https://saberpunto.com/programacion/variables-globales/</li>
+                </ol>
+            </div>
+        </div>
+        <script src="../js/lab04.js"></script> <!--Se lee cuando la todo el código ya fue leído para incluir el comportamiento-->            
     </body>
 </html>
