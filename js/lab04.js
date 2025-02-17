@@ -74,7 +74,7 @@ function problema4(){
 function problem5(){
     let res = 0;
     let num = parseInt(prompt("Problema 5: Dame un numero a invertir: "));
-    while (num > 0){
+    while (num >= 0){
         let digit = (num % 10);
         res = res * 10 + digit;
         num = Math.floor(num / 10); //para redondear numeros
