@@ -83,8 +83,8 @@ function problem5(){
 };
 
 function problema6(){
-    let s = {};
-    let g = {};
+    let g = [], s = [];
+    const kids = {}; //mejorar
     let numberKids = parseInt(prompt("Give me the number of kids: "));
     for (let i = 0; i < numberKids; i++){
         let greed = parseInt(prompt("Each greed kid: "));
