@@ -83,9 +83,8 @@ function problem5(){
 };
 
 function problema6(){
-    let arr1 = new Array();
-    let arr2 = new Array();
-    let g = [], s = [];
+    let s = {};
+    let g = {};
     let numberKids = parseInt(prompt("Give me the number of kids: "));
     for (let i = 0; i < numberKids; i++){
         let greed = parseInt(prompt("Each greed kid: "));
