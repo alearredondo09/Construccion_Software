@@ -18,6 +18,19 @@ img.myphoto{
     flex: 1;
     margin: 40px;
 }
+
+.button{
+    background-color: #43486b;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: monospace;
+    color: white;
+    padding: 20px;
+    margin-left: 10px;
+    text-align: center;
+}
+
 p.textR{
     margin-top: 4vw;
     font-size: 2vw;
@@ -71,3 +84,4 @@ p.textR{
     align-items: center; /* Centra verticalmente */
     margin: 1em;
 }
+

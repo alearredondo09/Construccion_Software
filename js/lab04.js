@@ -52,6 +52,7 @@ function problema3(){
     document.getElementById("problem3").innerHTML += `El arreglo tiene ${ceros} ceros, ${neg} números negativos y ${pos} números positivos`;
 };
 
+//checar esto
 function problema4(){
     let matrix = [], resultado = [];
     let rows = parseInt(prompt("Problema 4: Filas?: "));
@@ -82,41 +83,53 @@ function problem5(){
     document.getElementById("problema5").innerHTML += `El numero invertido es: ${res}`;    
 };
 
-function problema6(){
-    let g = [], s = [];
-    const kids = {}; //mejorar
+function problema6() {
+    let kids = [];
+    let cookies = [];
+    let maximizedGreed = 0;
+
     let numberKids = parseInt(prompt("Give me the number of kids: "));
-    for (let i = 0; i < numberKids; i++){
-        let greed = parseInt(prompt("Each greed kid: "));
-        g.push(greed);
-    }
-    let numbercookies = parseInt(prompt("Dame el numero"));
-    for (let j = 0; j < numbercookies; j++){
-        let cookies = parseInt(prompt("Size of the cookie: "));
-        s.push(cookies);
+    for (let i = 0; i < numberKids; i++) {
+        let greed = parseInt(prompt(`Greed of kid ${i + 1}: `));
+        kids.push(greed);
     }
 
-    let k = 0, l = 0, counter = 0;
-    // Ordenar ambos arreglos de menor a mayor
-    g.sort((a, b) => a - b);
-    s.sort((a, b) => a - b);
+    let numberCookies = parseInt(prompt("Give me the number of cookies: "));
+    for (let j = 0; j < numberCookies; j++) {
+        let size = parseInt(prompt(`Size of cookie ${j + 1}: `));
+        cookies.push(size);
+    }
 
-    while (k < g.length && l < s.length){
-        if (s[l] >= g[k]){
-            counter++;
+    // Ordenar de menor a mayor
+    kids.sort((a, b) => a - b);
+    cookies.sort((a, b) => a - b);
+
+    let k = 0, l = 0;
+    while (k < kids.length && l < cookies.length) {
+        if (cookies[l] >= kids[k]) {
+            maximizedGreed++;
             k++;
         }
         l++;
     }
-    document.getElementById("problem6").innerHTML += `La cantidad máxima de niños contentos es de ${counter}`;
+
+    // Crear un objeto para almacenar el resultado
+    let resultObject = {
+        message: `La cantidad máxima de niños contentos es de ${maximizedGreed}`,
+        totalKids: numberKids,
+        totalCookies: numberCookies,
+        happyKids: maximizedGreed
+    };
+
+    document.getElementById("problem6").innerHTML += resultObject.message;
 };
 
 
 window.onload = function() {
-    operaciones();
-    random();
-    problema3();
-    problema4();
-    problem5();
+    operaciones;
+    random;
+    problema3;
+    problema4;
+    problem5;
     problema6();
 };
