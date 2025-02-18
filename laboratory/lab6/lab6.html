@@ -1,21 +1,79 @@
 <!DOCTYPE html>
 <html datatheme="light">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Plantas!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-  </head>
-  <body>
+</head>
+<body>
     <section class="section">
         <div class="container">
-            <h1 class="title">
-                Hello World
-            </h1>
-            <p class="subtitle">
-                My first website with <strong>Bulma</strong>!
-            </p>
+            <h1 class="title">Laboratorio 6</h1>
+            <p>Alejandra Arredondo - A01711434</p>
+
+            <div class="box">
+                <form id="registrationForm" onsubmit="return validate()">
+                    
+                    <!-- Username Field -->
+                    <div class="field">
+                        <label class="label" for="username">Username</label>
+                        <div class="control">
+                            <input class="input is-medium is-rounded" type="text" id="username" name="username" placeholder="Enter Username" required>
+                        </div>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="field">
+                        <label class="label" for="email">Enter an email address:</label>
+                        <div class="control">
+                            <input class="input is-medium is-rounded" type="email" id="email" name="email" placeholder="hello@example.com" autocomplete="email" required>
+                        </div>
+                        <div id="result" class="help"></div>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="field">
+                        <label class="label" for="password">Password</label>
+                        <div class="control">
+                            <input id="password" name="password" class="input is-medium is-rounded" type="password" placeholder="**********" autocomplete="current-password" required>
+                        </div>
+                        <p id="passwordStrength"></p>
+                    </div>
+
+                    <!-- Confirm Password Field -->
+                    <div class="field">
+                        <label class="label" for="confirmPassword">Confirm Password</label>
+                        <div class="control">
+                            <input id="confirmPassword" name="confirmPassword" class="input is-medium is-rounded" type="password" placeholder="**********" autocomplete="current-password" required>
+                        </div>
+                        <p id="passwordError"></p>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="field">
+                        <div class="control">
+                            <button id="submitBtn" class="button is-block is-fullwidth is-primary is-medium is-rounded" type="submit">Verify</button>
+                        </div>
+                    </div>
+
+                </form>
+                <div class="box">
+                    <br>
+                    <label class="label">Links consulted for the activity</label>
+                    <ol>
+                        <li>https://www.geeksforgeeks.org/javascript-program-to-validate-password-using-regular-expressions/</li>
+                        <li>https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/neumorphic-login.html</li>
+                        <li>chrome-extension://noogafoofpebimajpfpamcfhoaifemoa/suspended.html#ttl=Official%20Bulma%20Documentation%20%7C%20Bulma%3A%20Free%2C%20open%20source%2C%20and%20modern%20CSS%20framework%20based%20on%20Flexbox&pos=0&uri=https://bulma.io/documentation/</li>
+                        <li>https://www.bing.com/search?EID=MBSC&form=BGGCDF&pc=U763&q=email+verification+using+javascript&PC=U316&FORM=CHROMN</li>
+                        <li>https://www.w3schools.com/howto/howto_js_password_validation.asp</li>
+                    </ol>
+                </div>
+            </div>
+
         </div>
     </section>
-  </body>
+
+    <script src="lab6.js"></script>
+</body>
 </html>
