@@ -3,8 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Plantas!</title>
+    <title>Laboratorio 6</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <style>
+        img{
+            width: 2em;
+            height: 2em;;    
+        }
+        .miniBox{
+            flex-wrap: wrap;
+            display: flex;
+        }
+    </style>
 </head>
 <body>
     <section class="section">
@@ -34,9 +44,15 @@
 
                     <!-- Password Field -->
                     <div class="field">
-                        <label class="label" for="password">Password</label>
                         <div class="control">
-                            <input id="password" name="password" class="input is-medium is-rounded" type="password" placeholder="**********" autocomplete="current-password" required>
+                            <div class="miniBox">
+                                <label class="label" for="password">Password</label>
+                                <img id="imgIcon" src="https://cdn-icons-png.flaticon.com/512/8975/8975012.png" alt="infoImg" >
+                                <p id="imageText"></p>
+                            </div>
+                                <div class="control">
+                                    <input id="password" name="password" class="input is-medium is-rounded" type="password" placeholder="**********" autocomplete="current-password" required>
+                                </div>
                         </div>
                         <p id="passwordStrength"></p>
                     </div>
@@ -58,6 +74,28 @@
                     </div>
 
                 </form>
+
+                <div class="box">
+                    <ol>
+                        <li>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?</li>
+                        <p>
+                            Esto se denomina validación de formulario en el lado del cliente y ayuda a garantizar que los datos que se envían coinciden con los requisitos 
+                            establecidos en los diversos controles de formulario.
+                        </p>
+                        <li>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</li>
+                        <p>
+                            Es tan sencillo como introducir un par de palabras reservadas en el código HTML utilizando la consola del desarrollador de nuestro navegador.
+                        </p>
+                        <li>Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</li>
+                        <p>
+                            Aunque las validaciones del lado del cliente con JavaScript pueden ser eludidas por usuarios malintencionados, siguen siendo una buena práctica
+                            porque mejoran la experiencia del usuario al proporcionar retroalimentación inmediata y reducen la carga en el servidor al evitar el envío de 
+                            datos incorrectos o mal formateados. Sin embargo, estas validaciones deben complementarse con validaciones en el servidor para garantizar la 
+                            seguridad y la integridad de los datos.
+                        </p>
+                    </ol>
+                </div>
+
                 <div class="box">
                     <br>
                     <label class="label">Links consulted for the activity</label>
@@ -67,6 +105,7 @@
                         <li>chrome-extension://noogafoofpebimajpfpamcfhoaifemoa/suspended.html#ttl=Official%20Bulma%20Documentation%20%7C%20Bulma%3A%20Free%2C%20open%20source%2C%20and%20modern%20CSS%20framework%20based%20on%20Flexbox&pos=0&uri=https://bulma.io/documentation/</li>
                         <li>https://www.bing.com/search?EID=MBSC&form=BGGCDF&pc=U763&q=email+verification+using+javascript&PC=U316&FORM=CHROMN</li>
                         <li>https://www.w3schools.com/howto/howto_js_password_validation.asp</li>
+                        <li>https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Forms/Form_validation</li>
                     </ol>
                 </div>
             </div>

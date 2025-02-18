@@ -9,7 +9,7 @@ function validate() {
 
     if (validateEmail(email)) {
         result.textContent = email + " is valid";
-        result.style.color = "blue";
+        result.style.color = "white";
     } else {
         result.textContent = email + " is not valid";
         result.style.color = "red";
@@ -17,56 +17,74 @@ function validate() {
     return false;
 };
 
-function validatePassword() {
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("confirmPassword").value;
-    const submitBtn = document.getElementById("submitBtn");
-    const errorElement = document.getElementById("passwordError");
-    const strengthElement = document.getElementById("passwordStrength");
-
-    const levels = {
-        1: "Very Weak",
-        2: "Weak",
-        3: "Medium",
-        4: "Strong",
-    };
-
-    if (password.length > 15) {
-        strengthElement.textContent = "Too lengthy";
-        strengthElement.style.color = "red";
-        return;
-    } else if (password.length < 8) {
-        strengthElement.textContent = "Too short";
-        strengthElement.style.color = "red";
-        return;
-    }
-
-    const checks = [/[a-z]/, /[A-Z]/, /\d/, /[@.#$!%^&*.?]/];
-
-    let score = checks.reduce((acc, rgx) => acc + rgx.test(password), 0);
-    strengthElement.textContent = `Strength: ${levels[score] || "Very Weak"}`;
-    if (score >=3){
-        strengthElement.style.color = 'green';
-    } else {
-        strengthElement.style.color = 'orange';
-    }
-
+function validatePassword(){
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    const passwordError = document.getElementById('passwordError');
+    const passwordStrength = document.getElementById('passwordStrength');
+    const submitBtn = document.getElementById('submitBtn');    
     let isValid = true;
 
-    if (password !== confirmPassword) {
-        errorElement.textContent = "Passwords do not match";
-        errorElement.classList.remove("success");
-        errorElement.classList.add("error");
+    //Check password length
+    if (password.length > 15){
+        passwordStrength.textContent = 'Too lengthy';
+        passwordStrength.style.color = 'orange';
+        isValid = false;
+    } else if (password.length < 8){
+        passwordStrength.textContent = 'Too short';
+        passwordStrength.style.color = 'red';
+        //passwordStrength.style.fontFamily = 'Roboto';
         isValid = false;
     } else {
-        errorElement.textContent = "Passwords match";
-        errorElement.classList.remove("error");
-        errorElement.classList.add("success");
+        passwordStrength.textContent = 'Perfect Length';
+        passwordStrength.style.color = 'green';
+        //passwordStrength.style.fontFamily = 'Roboto';
+    }
+
+    if (password !== confirmPassword){
+        passwordError.textContent = 'Passwords do not match';
+        passwordError.style.color = 'gray';
+        passwordStrength.style.fontFamily = 'Roboto';
+        isValid = false;
+        return
+    } else {
+        passwordError.textContent = 'Passwords match';
+        passwordError.style.color = 'green';
     }
 
     submitBtn.disabled = !isValid;
-    submitBtn.classList.toggle("enabled", isValid);
-};
+    submitBtn.classList.toggle('enabled', isValid);
+    
+}
 
-document.getElementById("password").addEventListener("input", validatePassword);
-document.getElementById("confirmPassword").addEventListener("input", validatePassword);
+const imgIcon = document.getElementById('imgIcon');
+const imageText = document.getElementById('imageText');
+
+imgIcon.addEventListener('mouseover', function() {
+    imageText.innerText = 'Add a password of 8 to 15 characters long';
+});
+
+imgIcon.addEventListener('mouseout', function() {
+    imageText.innerText = ''; // Borra el mensaje cuando el mouse sale de la imagen
+});
+
+password.addEventListener("keydown", event =>{
+    console.log(`Key down = ${event.key}`);
+    password.style.backgroundColor = 'tomato';
+    email.style.fontFamily = 'Roboto';
+})
+
+password.addEventListener("keyup", event =>{
+    console.log(`Key up = ${event}`);
+    password.style.backgroundColor = '#323232';  
+})
+
+confirmPassword.addEventListener('input', function() {
+    console.log('confirmPassword');
+    confirmPassword.style.color = 'pink';
+
+})
+
+// Add event listeners to the image icon
+password.addEventListener('input', validatePassword);
+confirmPassword.addEventListener('input', validatePassword);
