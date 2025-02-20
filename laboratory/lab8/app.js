@@ -24,8 +24,8 @@ const http = require('http');
 // objeto response => tiene toda la info de la información que se enviará devuelta
 // 
 const server = http.createServer( (request, response) => {
-    // console.log(request.url);
-    // 
+    console.log(request.url);
+    
 });
 
 // el servidor esta escuchando por el puerto 3000 (puedes ponerle cualquier numero arriba del 3000)
