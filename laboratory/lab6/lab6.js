@@ -69,13 +69,13 @@ imgIcon.addEventListener('mouseout', function() {
 });
 
 password.addEventListener("keydown", event =>{
-    console.log(`Key down = ${event.key}`);
+    //console.log(`Key down = ${event.key}`);
     password.style.backgroundColor = 'tomato';
     email.style.fontFamily = 'Roboto';
 })
 
 password.addEventListener("keyup", event =>{
-    console.log(`Key up = ${event}`);
+    //console.log(`Key up = ${event}`);
     password.style.backgroundColor = '#323232';  
 })
 
