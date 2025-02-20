@@ -25,6 +25,12 @@ const http = require('http');
 // 
 const server = http.createServer( (request, response) => {
     console.log(request.url);
+    //enviar respuesta por un header
+    response.setHeader('Content-Type', 'text/html');
+    // escribir algo en la pag
+    response.write('<h1>Hola Mundo!</h1>');
+    //enviar respuesta http
+    response.end();
     
 });
 
