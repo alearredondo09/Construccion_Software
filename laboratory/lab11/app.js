@@ -125,7 +125,8 @@ app.use((request, response, next) => {
     next(); 
 });
 
-app.use("/plantas/agregar",(resquest, response, next) => {
+//  app.get es para registrar un middleware para peticiones HTTP GET
+app.get('/plantas/agregar',(resquest, response, next) => {
     response.send(html_header + html_form + html_footer);
 });
 
