@@ -1,26 +1,13 @@
-// // busca el módulo de fs que es el modulo del file system
-// const file_system = require('fs');
-
-// // write file system para escribir codigo asincronico (bloquea todo que pasa en la computadora)
-// // el sincrono
-// file_system.writeFileSync('hola.txt', 'Hola desde node');
-
-// // Codigo asincrono no va en secuenncia, esto se imprime de acorde al tiempo en el que le dices que se imprime a comparación de los valores que 
-// // tiene el arreglo 
-// setTimeout(() => {console.log('jojo')}, 20000);
-// setTimeout(() => {console.log('jojo')}, 9000);
-
-// const arreglo = [5000, 60, 90, 100, 10, 20, 10000, 0, 120, 2000, 340, 1000, 50];
-
-// for (let item of arreglo){
-//     setTimeout(() => {
-//         console.log(item);
-//     }, item);
-// }
-
-const html = `
+const html_header = `
+<!DOCTYPE html>
 <html>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plantas!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  </head>
+  <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="https://bulma.io">
@@ -89,21 +76,24 @@ const html = `
     <section class="section">
         <div class="container">
             <h1 class="title">
-                Hello World
+                Invernadero
             </h1>
-            <p class="subtitle">
-                My first website with <strong>Bulma</strong>!
-            </p>
-            <div class="columns">
-                <div class="column">
-                  <button id="boton_regar" class="button is-danger">Regar</button>
-                </div>
-                <div class="column"><span id="imagen_menta"></span></div>
-                <div class="column"><span id="imagen_jacaranda"></span></div>
-                <div class="column"><span id="imagen_maqui"></span></div>
-                <div class="column">5</div>
-              </div>
-        </div>
+            `;
+            
+const html_form = `<form action="/agregar" method="POST">
+              <label for="nombre" class="label">Nombre de la planta</label>
+              <input
+                class="input is-info"
+                type="text"
+                placeholder="Orquídea"
+                id="nombre"
+                name="nombre"
+              />
+              <br><br>
+              <input class="button is-info" type="submit" value="Enviar">
+            </form>`;
+
+const html_footer = `</div>
     </section>
     <footer class="footer">
         <div class="content has-text-centered">
@@ -121,23 +111,58 @@ const html = `
       <script src="js/introjs.js"></script>
   </body>
 </html>
-`
+`;
+
+ // arreglo de plantas
+const plantas = []
 
 const http = require('http');
 
-//objeto request => tiene la info de la petición http
-// objeto response => tiene toda la info de la información que se enviará devuelta
-// 
-const server = http.createServer( (request, response) => {
+const server = http.createServer( (request, response) => {  
+  
+  if(request.method == "GET" && (request.url == "/agregar" || request.url == "/")) {
     console.log(request.url);
-    //enviar respuesta por un header
     response.setHeader('Content-Type', 'text/html');
-    // escribir algo en la pag
-    response.write(html);
-    //enviar respuesta http
+    response.write(html_header + html_form + html_footer);
     response.end();
+  } else if(request.method == "POST" && request.url == "/agregar") {
+    
+    const datos_completos = [];
+
+    request.on('data', (data)=>{
+      console.log(data);
+      datos_completos.push(data);
+    });
+
+    request.on('end', () => {
+      const string_datos_completos = Buffer.concat(datos_completos).toString();
+      console.log(string_datos_completos);
+      //Split separa un string por parámetro recibido y cada parte lo pone en un arreglo
+      const nueva_planta = string_datos_completos.split('=')[1]; 
+      console.log(nueva_planta);
+
+      // Si fueran 2 inputs:
+      // const nueva_planta = string_datos_completos.split('&')[0].split('=')[1]; 
+      // console.log(nueva_planta);
+
+      plantas.push(nueva_planta);
+      response.setHeader('Content-Type', 'text/html');
+      response.write(html_header);
+      for(const planta of plantas){
+        response.write(planta);
+      }
+
+    });
+
+  } else {
+    response.statusCode = 404;
+    response.setHeader('Content-Type', 'text/html');
+    response.write(html_header);
+    response.write('<div class="notification is-danger">La página no existe</div>');
+    response.write(html_footer);
+    response.end();
+  }
     
 });
 
-// el servidor esta escuchando por el puerto 3000 (puedes ponerle cualquier numero arriba del 3000)
 server.listen(3000);
