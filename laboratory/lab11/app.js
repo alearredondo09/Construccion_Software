@@ -80,7 +80,7 @@ const html_header = `
             </h1>
             `;
             
-const html_form = `<form action="/plantas_agregar" method="POST">
+const html_form = `<form action="/plantas/agregar" method="POST">
               <label for="nombre" class="label">Nombre de la planta</label>
               <input
                 class="input is-info"
@@ -116,6 +116,12 @@ const html_footer = `</div>
 const express = require('express');
 // Crea un servidor en una sola línea
 const app = express(); 
+const bodyParser = require('body-parser');
+
+// al objeto request le agrega un objeto body
+app.use(bodyParser.urlencoded({extended: false}));
+
+const plantas = [];
 
 //Middleware
 //  función next: hace que avanza del middleware 1 al siguiente middleware registrado
@@ -126,12 +132,15 @@ app.use((request, response, next) => {
 });
 
 //  app.get es para registrar un middleware para peticiones HTTP GET
-app.get('/plantas/agregar',(resquest, response, next) => {
+app.get('/plantas/agregar',(request, response, next) => {
     response.send(html_header + html_form + html_footer);
 });
 
 //  app.post se usa para enviar las cosas
-app.post('/plantas/agregar',(resquest, response, next) => {
+app.post('/plantas/agregar',(request, response, next) => {
+    console.log(request.body);
+    plantas.push(request.body.nombre);
+    let html = 
     response.send(html_header + html_form + html_footer);
 });
 
