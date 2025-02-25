@@ -130,6 +130,11 @@ app.get('/plantas/agregar',(resquest, response, next) => {
     response.send(html_header + html_form + html_footer);
 });
 
+//  app.post se usa para enviar las cosas
+app.post('/plantas/agregar',(resquest, response, next) => {
+    response.send(html_header + html_form + html_footer);
+});
+
 // Middleware
 app.use((request, response, next) => {
     console.log('Otro middleware!');
