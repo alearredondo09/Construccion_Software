@@ -1,8 +1,5 @@
 const express = require('express');
-
-// objeto de express que inicializa el routeador
 const router = express.Router();
-
 const html_header = `
 <!DOCTYPE html>
 <html>
@@ -34,11 +31,15 @@ const html_header = `
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
             <a class="navbar-item">
+            <a href="/" class="navbar-item">
               Home
             </a>
       
-            <a class="navbar-item">
-              Documentation
+            <a href="/plantas/agregar" class="navbar-item">
+              Agregar planta
+            </a>
+            <a href="/plantas/regar" class="navbar-item">
+              Regar plantas
             </a>
       
             <div class="navbar-item has-dropdown is-hoverable">
@@ -97,7 +98,6 @@ const html_form = `<form action="/plantas/agregar" method="POST">
               <br><br>
               <input class="button is-info" type="submit" value="Enviar">
             </form>`;
-
 const html_footer = `</div>
     </section>
     <footer class="footer">
@@ -117,16 +117,12 @@ const html_footer = `</div>
   </body>
 </html>
 `;
-
-
 const plantas = [];
-
-//app.get es para registrar un middleware para peticiones HTTP GET
+//router.get es para registrar un middleware para peticiones HTTP GET
 router.get('/agregar', (request, response, next) => {
     response.send(html_header + html_form + html_footer);
 });
-
-//app.post es para registrar un middleware para peticiones HTTP POST
+//router.post es para registrar un middleware para peticiones HTTP POST
 router.post('/agregar', (request, response, next) => {
     console.log(request.body);
     plantas.push(request.body.nombre);
@@ -147,5 +143,8 @@ router.post('/agregar', (request, response, next) => {
     html += html_footer;
     response.send(html);
 });
-
+const path = require('path');
+router.get('/regar', (request, response, next) => {
+  response.sendFile(path.join(__dirname, '..', 'views', 'index.html'));
+});
 module.exports = router;
