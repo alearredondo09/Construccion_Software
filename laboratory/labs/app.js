@@ -6,6 +6,7 @@ const path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs');
+// se va a buscar directo a la carpeta views pq ahí están las vistas
 app.set('views', 'views');
 
 const bodyParser = require('body-parser');
@@ -19,8 +20,6 @@ app.use((request, response, next) => {
     //Le permite a la petición avanzar hacia el siguiente middleware
     next(); 
 });
-
-
 
 const plantasRoutes = require('./routes/plantas.routes');
 
