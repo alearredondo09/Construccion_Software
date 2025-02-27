@@ -86,6 +86,7 @@ const html_form = `<form action="/agregar" method="POST">
                 class="input is-info"
                 type="text"
                 placeholder="Orquídea"
+              
                 id="nombre"
                 name="nombre"
               />
