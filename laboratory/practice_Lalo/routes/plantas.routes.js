@@ -1,12 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const html_header = ``;
-const html_footer = ``;
+ 
+const plantas_controller = require('../controllers/plantas.controllers');
 const plantas = [];
+
+
 //router.get es para registrar un middleware para peticiones HTTP GET
-router.get('/agregar', (request, response, next) => {
-    response.render('agregar_planta');
-});
+router.get('/agregar', plantas_controller.get_agregar);
+
 //router.post es para registrar un middleware para peticiones HTTP POST
 router.post('/agregar', (request, response, next) => {
     console.log(request.body);
