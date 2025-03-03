@@ -10,10 +10,14 @@ router.get('/add', plantas_controller.get_agregar);
 //router.post es para registrar un middleware para peticiones HTTP POST
 router.post('/agregar', plantas_controller.post_agregar);
 
+router.get('/regar', plantas_controller.get_regar);
+
 const path = require('path');
 
 router.get('/regar', (request, response, next) => {
   response.sendFile(path.join(__dirname, '..', 'views', 'index.html'));
 });
+
+router.get('/', plantas_controller.get_root);
 
 module.exports = router;

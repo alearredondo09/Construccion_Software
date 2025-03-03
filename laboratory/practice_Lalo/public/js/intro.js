@@ -1,89 +1,89 @@
-// consola (log, info, warn, error, assert)
-console.log("Aquí se habla de plantas");
-console.info("las plantas sirven para muchas cosas");
-console.warn("Cuidado con las plantas venenosas");
-console.error("No las vayas a ahogar");
-console.assert(1 == 1);
-console.assert(1 === 1);
-console.assert(1 == "1");
-console.assert(1 === "1");
-console.assert(1 == true);
-console.assert(1 === true);
+// // consola (log, info, warn, error, assert)
+// console.log("Aquí se habla de plantas");
+// console.info("las plantas sirven para muchas cosas");
+// console.warn("Cuidado con las plantas venenosas");
+// console.error("No las vayas a ahogar");
+// console.assert(1 == 1);
+// console.assert(1 === 1);
+// console.assert(1 == "1");
+// console.assert(1 === "1");
+// console.assert(1 == true);
+// console.assert(1 === true);
 
-// variables, constantes
-var comestible = "espinaca"; //forma antigua de declarar variables
+// // variables, constantes
+// var comestible = "espinaca"; //forma antigua de declarar variables
 
-let flor = "rosa"; //forma moderna de declarar variables
+// let flor = "rosa"; //forma moderna de declarar variables
 
-const precio = 99.99;
+// const precio = 99.99;
 
-// Alcance de las variables
-for (let i = 0; i < 10; i++) {
-    console.log(i);
-    var mi_planta = "eucalipto";
-}
-console.log(mi_planta);
-
-
-// alert, prompt, confirm
-alert("hola");
-
-const mi_planta_favorita = prompt("¿Cuál es tu planta favorita?");
-
-const is_hungry = confirm("¿Tienes hambre?");
-
-// funciones tradicionales
-function regar(){
-    console.log("Se regaron las plantas");
-    return mi_planta_favorita;
-}
-
-regar();
+// // Alcance de las variables
+// for (let i = 0; i < 10; i++) {
+//     console.log(i);
+//     var mi_planta = "eucalipto";
+// }
+// console.log(mi_planta);
 
 
-// funciones modernas
-() => {}  //Esto es una función anónima
+// // alert, prompt, confirm
+// alert("hola");
 
-//asignar una función anónima a la variable mi_funcion
-const mi_funcion = () => {
-    console.log("función anónima");
-};
+// const mi_planta_favorita = prompt("¿Cuál es tu planta favorita?");
 
-//Ejecuta la función anónima por medio del nombre de la variable
-mi_funcion();
+// const is_hungry = confirm("¿Tienes hambre?");
+
+// // funciones tradicionales
+// function regar(){
+//     console.log("Se regaron las plantas");
+//     return mi_planta_favorita;
+// }
+
+// regar();
 
 
-// arreglos
+// // funciones modernas
+// () => {}  //Esto es una función anónima
 
-const arreglo = ["Elemento"];
+// //asignar una función anónima a la variable mi_funcion
+// const mi_funcion = () => {
+//     console.log("función anónima");
+// };
 
-const arreglo2 = new Array() 
+// //Ejecuta la función anónima por medio del nombre de la variable
+// mi_funcion();
 
-arreglo.push("Otro elemento");
 
-arreglo[10] = "Uno más";
+// // arreglos
 
-arreglo[0] = "Elemento modificado";
+// const arreglo = ["Elemento"];
 
-//arreglos asociativos
+// const arreglo2 = new Array() 
 
-arreglo["uno"] = 1;
+// arreglo.push("Otro elemento");
 
-//recorrido tradicional del arreglo
+// arreglo[10] = "Uno más";
 
-for (let i = 0; i < arreglo.length; i++) {
-    console.log(arreglo[i]);
-}
+// arreglo[0] = "Elemento modificado";
 
-//recorridos alternativos del arreglo
+// //arreglos asociativos
 
-for(let posicion in arreglo) {
-    console.log(posicion);
-}
+// arreglo["uno"] = 1;
 
-for(let valor of arreglo) {
-    console.log(valor);
-}
+// //recorrido tradicional del arreglo
+
+// for (let i = 0; i < arreglo.length; i++) {
+//     console.log(arreglo[i]);
+// }
+
+// //recorridos alternativos del arreglo
+
+// for(let posicion in arreglo) {
+//     console.log(posicion);
+// }
+
+// for(let valor of arreglo) {
+//     console.log(valor);
+// }
 
 
 //Objetos
