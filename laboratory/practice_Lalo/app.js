@@ -1,4 +1,3 @@
-
 const express = require('express');
 const app = express();
 
@@ -6,7 +5,6 @@ const path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs');
-// se va a buscar directo a la carpeta views pq ahí están las vistas
 app.set('views', 'views');
 
 const bodyParser = require('body-parser');
@@ -29,7 +27,8 @@ app.use((request, response, next) => {
     console.log('Otro middleware!');
     
     //Manda la respuesta
-    response.send('¡Hola mundo!'); 
+    response.statusCode = 404;
+    response.send('No se encuentra el recurso que estás buscando'); 
 });
 
 app.listen(3000);
