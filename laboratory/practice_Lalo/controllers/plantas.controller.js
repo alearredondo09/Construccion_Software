@@ -17,7 +17,8 @@ exports.post_agregar = (request, response, next) => {
 }
 
 exports.get_root = (request, response, next) => {
-    console.log(request.get('Cookie'));
+    // body parser
+    console.log(request.get('Cookie')); 
     response.render('lista_plantas', {
         isLoggedIn : request.session.isLoggedIn || false,
         username: request.session.username || '',
