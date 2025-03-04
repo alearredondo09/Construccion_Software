@@ -1,7 +1,10 @@
 const Planta = require('../models/plantas.models');
 
 exports.get_agregar = (request, response, next) => {
-    response.render('agregar_planta');
+    console.log(request.session.username);
+    response.render('agregar_planta', {
+        isLoggedIn : request.session.isLoggedIn || false,
+    });
 };
 
 exports.post_agregar = (request, response, next) => {
@@ -14,6 +17,7 @@ exports.post_agregar = (request, response, next) => {
 
 exports.get_root = (request, response, next) => {
     response.render('lista_plantas', {
+        isLoggedIn : request.session.isLoggedIn || false,
         plantas: Planta.fetchAll(),
     });
 };
