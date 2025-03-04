@@ -1,4 +1,4 @@
-const Planta = require('../models/planta.model');
+const Planta = require('../models/plantas.models');
 
 exports.get_agregar = (request, response, next) => {
     response.render('agregar_planta');
