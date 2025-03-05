@@ -3,16 +3,8 @@ const file_system = require("fs");
 
 const router = express.Router();
 
-const html_firstpage = ``;
-
-const html = ``;
-
-router.get("/", (request, response, send) => {
-  response.send(html_firstpage);
-});
-
 router.get("/registro", (request, response, next) => {
-  response.send(html);
+  response.render('resgistries');
 });
 
 router.post("/registro", (request, response, next) => {
@@ -20,6 +12,11 @@ router.post("/registro", (request, response, next) => {
   const contras = request.body.password;
   file_system.appendFileSync("hola.txt", contras + "\n");
   response.send("paso");
+});
+
+const path = require('path');
+router.get("/registro", (request, response, next) => {
+  response.sendFile(path.join(__dirname, "..", "views", "index.html"));
 });
 
 module.exports = router;
