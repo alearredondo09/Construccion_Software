@@ -1,24 +1,18 @@
 const express = require("express");
-const file_system = require("fs");
-
 const router = express.Router();
 
-const html = ``;
-
-const html_holaMundo = ``;
-
-const html_questions = ``;
 
 router.get("/pregunta", (request, response, next) => {
-  response.send(html);
+  response.render('display_questions');
 });
 
-router.get("/mundo", (request, response, next) => {
-  response.send(html_holaMundo);
+router.get("/lab1", (request, response, next) => {
+  response.render('display_lab1');
 });
 
-router.get("/questions", (request, response, next) => {
-  response.send(html_questions);
+const path = require('path');
+router.get("/hello", (request, response, next) => {
+  response.sendFile(path.join(__dirname, '..', 'views', 'index.html'));
 });
 
 module.exports = router;
