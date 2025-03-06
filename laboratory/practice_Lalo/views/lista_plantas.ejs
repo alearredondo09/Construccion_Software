@@ -1,4 +1,13 @@
 <%- include('includes/_header') %>
+
+<% 
+    if (info != ''){ %>
+        <div class="notificacion is-info">
+            <%= info %>
+        </div>
+    <% }
+%>
+
 <div class="columns">
 <% for(let planta of plantas) { %>
     <div class="column">

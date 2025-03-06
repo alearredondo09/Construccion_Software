@@ -4,7 +4,7 @@ const pool = mysql.createPool({
     host: 'localhost',
     // usuario que creaste, nunca tiene que llegar a producción
     user: 'root',
-    database: 'database_name',
+    database: 'plantas',
     // no debe de estar y nunca tiene que llegar a producción
     password: '',
 });
