@@ -1,4 +1,5 @@
 const db = require('../utils/database');
+
 module.exports = class Planta {
 
     //Constructor de la clase. Sirve para crear un nuevo objeto, y en él se definen las propiedades del modelo

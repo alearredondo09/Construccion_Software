@@ -1,22 +1,31 @@
-<form action="/users/login" method="POST">
-  <label for="username" class="label">Usuario</label>
-  <input
-    class="input is-info"
-    type="text"
-    placeholder="Groot"
-    id="username"
-    name="username"
-    required
-  />
-  <br><br>
-  <label for="password" class="label">Password</label>
-  <input
-    class="input is-info"
-    type="password"
-    id="password"
-    name="password"
-    required
-  />
-  <br><br>
-  <input class="button is-info" type="submit" value="Entrar">
+<% if (info != '') { %>
+  <div class="notification is-info">
+      <%= info %>
+  </div>
+<% } %>
+
+<form action=
+  "/users/<% if (isNew) { %>signup<% } else { %>login<% } %>" 
+  method="POST"
+  >
+    <label for="username" class="label">Usuario</label>
+    <input
+      class="input is-info"
+      type="text"
+      placeholder="Groot"
+      id="username"
+      name="username"
+      required
+    />
+    <br><br>
+    <label for="password" class="label">Password</label>
+    <input
+      class="input is-info"
+      type="password"
+      id="password"
+      name="password"
+      required
+    />
+    <br><br>
+    <input class="button is-info" type="submit" value="Entrar">
 </form>
