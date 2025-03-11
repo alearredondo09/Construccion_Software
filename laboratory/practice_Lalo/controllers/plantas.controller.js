@@ -5,6 +5,7 @@ exports.get_agregar = (request, response, next) => {
     response.render('agregar_planta', {
         isLoggedIn: request.session.isLoggedIn || false,
         username: request.session.username || '',
+        csrfToken: request.csrfToken(),
     });
 };
 
@@ -22,6 +23,7 @@ exports.post_agregar = (request, response, next) => {
 }
 
 exports.get_root = (request, response, next) => {
+
     const mensaje = request.session.info || '';
     if (request.session.info) {
         request.session.info = '';
