@@ -24,6 +24,8 @@ exports.post_agregar = (request, response, next) => {
 
 exports.get_root = (request, response, next) => {
 
+    console.log(request.session.privilegios);
+
     const mensaje = request.session.info || '';
     if (request.session.info) {
         request.session.info = '';

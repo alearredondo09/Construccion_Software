@@ -56,11 +56,16 @@ exports.post_login = (request, response, next) => {
             const bcrypt = require('bcryptjs');
             bcrypt.compare(request.body.password, rows[0].password).then((doMatch) => {
                 if (doMatch) {
-                    request.session.isLoggedIn = true;
-                    request.session.username = request.body.username;
-                    return request.session.save((error) => {
-                        response.redirect('/plantas');
-                    });
+                    Usuario.getPrivilegios(rows[0].username).then((privilegios, fieldData) => {
+                        request.session.privilegios = privilegios;
+                        request.session.isLoggedIn = true;
+                        request.session.username = request.body.username;
+                        return request.session.save((error) => {
+                            response.redirect('/plantas');
+                        });
+                    }).catch((error) => {
+                        console.log(error)
+                    })
                 } else {
                     request.session.warning = `Usuario y/o contraseña incorrectos`;
                     response.redirect('/users/login');
